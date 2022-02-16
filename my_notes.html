@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Smart Teach - Add Tution</title>
+    <title>Smart Teach - Teachers</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,19 +34,19 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard_teacher.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard_student.html">
                 <div class="sidebar-brand-icon">
-                    <i class="fas fa-solid fa-desktop"></i>
+                    <i class="fas fa-solid fa-school"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Smart <b>Teach</b></div>
+                <div class="sidebar-brand-text mx-3">Smart Teach</div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="dashboard_teacher.html">
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard_student.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -56,14 +56,20 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Profile
+                Student Information
             </div>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="profile_teacher.html">
-                    <i class="fas fa-solid fa-user-graduate"></i>
+                <a class="nav-link" href="profile.html">
+                    <i class="fas fa-solid fa-graduation-cap"></i>
                     <span>Profile</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="mytutions.html">
+                    <i class="fas fa-solid fa-school"></i>
+                    <span>My Tutions</span></a>
             </li>
 
             <!-- Divider -->
@@ -71,47 +77,38 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Tution Management
+                Search
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-solid fa-desktop"></i>
-                    <span>Tutions</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Management:</h6>
-                        <a class="collapse-item" href="add_tution.html">Add Tution</a>
-                        <a class="collapse-item" href="delete_tution.html">Delete Tution</a>
-                    </div>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" href="search_tutions.html">
+                    <i class="fas fa-solid fa-id-card"></i>
+                    <span>Search Tutions</span></a>
             </li>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-solid fa-book"></i>
-                    <span>Notes</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Notes Management</h6>
-                        <a class="collapse-item" href="add_note.html">Add New Notes</a>
-                        <a class="collapse-item" href="all_notes.html">All Notes</a>
-                    </div>
-                </div>
+                <a class="nav-link" href="search_teachers.html">
+                    <i class="fas fa-solid fa-users"></i>
+                    <span>Search Teachers</span></a>
             </li>
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="student_list.html">
-                    <i class="fas fa-solid fa-list"></i>
-                    <span>Student List</span></a>
-            </li>
+             <!-- Divider -->
+             <hr class="sidebar-divider">
+
+             <!-- Heading -->
+             <div class="sidebar-heading">
+                 Notes
+             </div>
+ 
+ 
+             <!-- Nav Item - Utilities Collapse Menu -->
+             <li class="nav-item active">
+                 <a class="nav-link" href="my_notes.html">
+                     <i class="fas fa-solid fa-book"></i>
+                     <span>My Notes</span></a>
+             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -294,7 +291,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="profile_teacher.html">
+                                <a class="dropdown-item" href="profile.html">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -315,49 +312,59 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Add New Tution</h1>
-                    <p class="mb-4">Enter tution details so that student can find you easily.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Notes Database</h1>
+                    <p class="mb-4">All teacher provided notes are here.</p>
 
                     <!-- DataTales Example -->
-                    <div class="card o-hidden border-0 shadow-lg">
-                        <div class="card-body p-0">
-                            <!-- Nested Row within Card Body -->
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="p-5">
-                                        <form class="user">
-                                            <div class="form-group row">
-                                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                                    <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                                        placeholder="Subject">
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                                        placeholder="City">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                                    <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                                        placeholder="Fees">
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                                        placeholder="Strength">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                                    <input type="password" class="form-control form-control-user"
-                                                        id="exampleInputPassword" placeholder="Duration">
-                                                </div>
-                                            </div>
-                                            <a href="#" class="btn btn-danger btn-user btn-block">
-                                                Add Tution
-                                            </a>
-                                        </form>
-                                    </div>
-                                </div>
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Your e-Notes</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Teacher Name</th>
+                                            <th>Subject</th>
+                                            <th>Topic</th>
+                                            <th>Release Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Teacher Name</th>
+                                            <th>Subject</th>
+                                            <th>Topic</th>
+                                            <th>Release Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>English</td>
+                                            <td>Litreture</td>
+                                            <td>02/05/2022</td>
+                                            <td><button type="button" class="btn btn-sm btn-success">Download Note</button> <button type="button" class="btn btn-sm btn-danger">Delete Note</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>English</td>
+                                            <td>Litreture</td>
+                                            <td>02/05/2022</td>
+                                            <td><button type="button" class="btn btn-sm btn-success">Download Note</button> <button type="button" class="btn btn-sm btn-danger">Delete Note</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>English</td>
+                                            <td>Litreture</td>
+                                            <td>02/05/2022</td>
+                                            <td><button type="button" class="btn btn-sm btn-success">Download Note</button> <button type="button" class="btn btn-sm btn-danger">Delete Note</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -372,7 +379,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Smart Teach 2022</span>
                     </div>
                 </div>
             </footer>

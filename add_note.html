@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Smart Teach - Add Tution</title>
+    <title>Smart Teach - Add Note</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -75,7 +75,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-solid fa-desktop"></i>
@@ -91,7 +91,7 @@
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-solid fa-book"></i>
@@ -315,8 +315,8 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Add New Tution</h1>
-                    <p class="mb-4">Enter tution details so that student can find you easily.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Add New Notes</h1>
+                    <p class="mb-4">Please add notes for the students.</p>
 
                     <!-- DataTales Example -->
                     <div class="card o-hidden border-0 shadow-lg">
@@ -328,32 +328,26 @@
                                         <form class="user">
                                             <div class="form-group row">
                                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                                    <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                                        placeholder="Subject">
+                                                    <input type="text" class="form-control" id="exampleFirstName"
+                                                        placeholder="Enter Subject">
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                                        placeholder="City">
+                                                    <select class="form-control" id="exampleLastName"
+                                                        placeholder="Notes Date">
+                                                        <option value="" selected disable>Select Tution</option>
+                                                        <option value="">Tution 1</option>
+                                                        <option value="">Tution 2</option>
+                                                        <option value="">Tution 3</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="form-group row">
-                                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                                    <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                                        placeholder="Fees">
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                                        placeholder="Strength">
-                                                </div>
+                                            <div class="form-group">
+                                                    <textarea class="form-control" rows="4" cols="50" placeholder="Enter Notes">
+                                                       Enter Notes
+                                                    </textarea>
                                             </div>
-                                            <div class="form-group row">
-                                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                                    <input type="password" class="form-control form-control-user"
-                                                        id="exampleInputPassword" placeholder="Duration">
-                                                </div>
-                                            </div>
-                                            <a href="#" class="btn btn-danger btn-user btn-block">
-                                                Add Tution
+                                            <a href="#" class="btn btn-success btn-user btn-block">
+                                                Add Notes
                                             </a>
                                         </form>
                                     </div>
@@ -372,7 +366,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Smart Teach 2022</span>
                     </div>
                 </div>
             </footer>

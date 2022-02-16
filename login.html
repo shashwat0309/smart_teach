@@ -57,7 +57,7 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        <a onclick="login();" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a>
                                         <hr>
@@ -86,7 +86,22 @@
         </div>
 
     </div>
+    <script type="text/javascript">
+        function login() {
+            username = document.getElementById("exampleInputEmail").value;
+            password = document.getElementById("exampleInputPassword").value;
+            if(username == "student" && password == "123")
+            {
+                window.location.href = "dashboard_student.html";
+            }else if(password == "teacher" && password == "123")
+            {
+                window.location.href = "dashboard_teacher.html";
+            }else{
+                alert("Wrong Email Id And Password!");
+            }
+        }
 
+    </script>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
